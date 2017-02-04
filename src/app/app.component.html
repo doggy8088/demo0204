@@ -8,7 +8,7 @@
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
-          <app-article [item]="item" (delete)="deleteArticle($event)" *ngFor="let item of data"></app-article>
+          <app-article [item]="item" *ngFor="let item of data"></app-article>
 
       </div>
     </section>
