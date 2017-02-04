@@ -26,4 +26,10 @@ export class HeaderComponent implements OnInit {
       this.num++;
     }
   }
+
+  subtitleClasses() {
+    return {
+      'highlight': (this.num%2==1)
+    };
+  }
 }
