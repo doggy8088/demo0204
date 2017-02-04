@@ -13,6 +13,11 @@ export class AppComponent {
     this.keyword = str;
   }
 
+  deleteArticle(item) {
+    let idx = this.data.indexOf(item);
+    this.data.splice(idx, 1);
+  }
+
   data = [
     {
       "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
