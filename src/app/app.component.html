@@ -77,7 +77,9 @@
           <div class="widget-content">
               <div id="searchbox">
                 <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s"
-                       [value]="keyword" #iKeyword>
+                       [value]="keyword" #iKeyword
+                       (keyup.enter)="doSearch(iKeyword.value)"
+                       (keyup.escape)="doSearch('')">
                 <input type="button" value="搜尋" id="searchbutton"
                        (click)="doSearch(iKeyword.value)">
                 {{keyword}}
