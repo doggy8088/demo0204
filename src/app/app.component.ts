@@ -10,10 +10,7 @@ import { DataService } from './data.service';
 export class AppComponent {
   keyword = 'app works!';
 
-  data: any;
-
-	constructor(private datasvc: DataService) {
-    this.data = datasvc.data;
+	constructor(public datasvc: DataService) {
 	}
 
   doSearch(str) {

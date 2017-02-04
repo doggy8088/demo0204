@@ -7,25 +7,12 @@ import { DataService } from '../data.service';
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
-export class ArticleComponent implements OnInit, OnDestroy {
+export class ArticleComponent {
 
   @Input()
   item: any;
 
-	constructor(private datasvc: DataService) {
+	constructor(public datasvc: DataService) {
 	}
-
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
-  }
-
-  ngOnDestroy() {
-  }
-
-  deleteMe(item) {
-    this.datasvc.deleteArticle(item);
-  }
 
 }
