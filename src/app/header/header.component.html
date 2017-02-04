@@ -30,7 +30,9 @@
 
       <div class="pull-left">
         <h1><a href="{{homeUrl}}">{{pageTitle}}</a></h1>
-        <h3 class="highlight" [innerHTML]="pageSubtitle"></h3>
+        <h3 class="highlight" (click)="plusOne($event)">
+          {{pageSubtitle}} +{{num}}
+        </h3>
       </div>
 
       <div id="social-icons" class="pull-right social-icon">
