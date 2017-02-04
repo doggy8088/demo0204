@@ -6,10 +6,18 @@ export class DataService {
 
   constructor(private http: Http) {
     // http://localhost:4200/api/articles.json
+
     http.get('/api/articles.json')
       .subscribe( (res) => {
         this.data = res.json();
       });
+
+    // let self = this;
+    // http.get('/api/articles.json')
+    //   .subscribe(function (res) {
+    //     self.data = res.json();
+    //   });
+
   }
 
   deleteArticle(item) {
